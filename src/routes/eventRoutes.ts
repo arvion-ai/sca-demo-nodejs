@@ -1,7 +1,7 @@
 import express from "express";
 import { scheduleEvent, listEvents } from "../services/eventService";
 
-const app = express(); // Use `app` directly in Express 3.x
+const app = express.Router(); // Use `app` directly in Express 3.x
 
 // Route to schedule an event
 app.post("/schedule", (req, res) => {

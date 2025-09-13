@@ -1,7 +1,7 @@
 import express from "express";
 import { getCurrentTime, convertTimeToZone } from "../services/timeService";
 
-const app = express(); // Express 3.x doesn't have Router()
+const app = express.Router(); // Express 3.x doesn't have Router()
 
 // Route to get current time
 app.get("/now", (req, res) => {
