@@ -1,37 +1,34 @@
 {
   "name": "sca-demo-nodejs",
   "version": "1.0.0",
-  "description": "This is a **Node.js + TypeScript** project using **Express 3.x**, `date-fns 2.0.0`, and `date-fns-tz 2.0.0`.   It provides API endpoints for **time conversions, user local time retrieval, and event scheduling**.",
-  "main": "server.js",
+  "description": "A simple Node.js application for demonstrating software composition analysis.",
+  "main": "app.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "debug": "node --inspect -r ts-node/register src/server.ts",
-    "build": "tsc",
-    "dev": "ts-node src/server.ts",
-    "lint:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "lint:fix": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arvion-ai/sca-demo-nodejs.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "sca",
+    "nodejs",
+    "dependency",
+    "analysis"
+  ],
+  "author": "Arvion AI",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/arvion-ai/sca-demo-nodejs/issues"
   },
   "homepage": "https://github.com/arvion-ai/sca-demo-nodejs#readme",
   "dependencies": {
-    "date-fns": "2.0.0",
-    "date-fns-tz": "2.0.0",
-    "express": "3.21.2",
-    "prettier": "^3.5.2"
+    "axios": "^1.6.7",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.13.5",
-    "typescript": "^5.7.3"
+    "eslint": "^8.57.0"
   }
 }
