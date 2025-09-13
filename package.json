@@ -1,2 +1,34 @@
 {
-  
+  "name": "sca-demo-nodejs",
+  "version": "1.0.0",
+  "description": "A simple Node.js application for demonstrating software composition analysis.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvion-ai/sca-demo-nodejs.git"
+  },
+  "keywords": [
+    "sca",
+    "nodejs",
+    "dependency",
+    "analysis"
+  ],
+  "author": "Arvion AI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvion-ai/sca-demo-nodejs/issues"
+  },
+  "homepage": "https://github.com/arvion-ai/sca-demo-nodejs#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
