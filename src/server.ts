@@ -4,8 +4,7 @@ import userRoutes from "./routes/userRoutes";
 import eventRoutes from "./routes/eventRoutes";
 
 const app = express();
-app.use(express.json()); // Parse JSON bodies
-app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
+app.use((express as any).bodyParser());
 
 app.use("/time", timeRoutes);
 app.use("/users", userRoutes);
