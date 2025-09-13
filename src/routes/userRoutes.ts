@@ -1,10 +1,10 @@
 import express from "express";
 import { getUserLocalTime } from "../services/timeService";
 
-const app = express(); // Use `app` directly instead of `express.Router()`
+const router = express.Router(); // Use express.Router for modular routes in Express 4+
 
 // Route to get user local time based on their timezone
-app.get("/:id/timezone", (req, res) => {
+router.get("/:id/timezone", (req, res) => {
   const userId = parseInt(req.params.id);
   const { timezone } = req.query;
 
@@ -15,4 +15,4 @@ app.get("/:id/timezone", (req, res) => {
   res.json({ localTime: getUserLocalTime(userId, timezone as string) });
 });
 
-export default app;
+export default router;
