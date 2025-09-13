@@ -1,23 +1,2 @@
 {
-  "name": "sca-demo-nodejs",
-  "version": "1.0.0",
-  "description": "A simple Node.js app for SCA demo",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arvion-ai/sca-demo-nodejs.git"
-  },
-  "author": "Arvion AI",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/arvion-ai/sca-demo-nodejs/issues"
-  },
-  "homepage": "https://github.com/arvion-ai/sca-demo-nodejs#readme",
-  "dependencies": {
-    "express": "^4.18.3"
-  }
-}
+  
