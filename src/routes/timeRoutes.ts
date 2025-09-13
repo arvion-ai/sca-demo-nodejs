@@ -1,15 +1,15 @@
 import express from "express";
 import { getCurrentTime, convertTimeToZone } from "../services/timeService";
 
-const app = express(); // Express 3.x doesn't have Router()
+const router = express.Router(); // Use `express.Router()` in Express 4.x
 
 // Route to get current time
-app.get("/now", (req, res) => {
+router.get("/now", (req, res) => {
   res.json({ time: getCurrentTime() });
 });
 
 // Route to convert time from one timezone to another
-app.get("/convert", (req, res) => {
+router.get("/convert", (req, res) => {
   const { time, fromTz, toTz } = req.query;
   if (!time || !fromTz || !toTz) {
     return res.status(400).json({ error: "Missing parameters" });
@@ -23,4 +23,4 @@ app.get("/convert", (req, res) => {
   });
 });
 
-export default app;
+export default router;

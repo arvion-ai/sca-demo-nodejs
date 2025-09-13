@@ -1,10 +1,10 @@
 import express from "express";
 import { scheduleEvent, listEvents } from "../services/eventService";
 
-const app = express(); // Use `app` directly in Express 3.x
+const router = express.Router(); // Use `express.Router()` in Express 4.x
 
 // Route to schedule an event
-app.post("/schedule", (req, res) => {
+router.post("/schedule", (req, res) => {
   const { name, date, timezone } = req.body;
   if (!name || !date || !timezone) {
     return res.status(400).json({ error: "Missing event details" });
@@ -14,8 +14,8 @@ app.post("/schedule", (req, res) => {
 });
 
 // Route to list all events
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.json(listEvents());
 });
 
-export default app;
+export default router;
